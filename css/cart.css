@@ -1,0 +1,294 @@
+body {
+    width: 100%;
+    height: 100%;
+    background: #f5f5f5;
+}
+
+#header {
+    position: relative;
+    text-align: center;
+    line-height: 44px;
+}
+
+#header p {
+    color: #333;
+    font-size: 18px;
+}
+
+/*-----安全提示部分------*/
+
+#safe_type {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    text-align: center;
+    background: #ffffff;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 10px;
+}
+
+#safe_type span {
+    position: relative;
+    padding-left: 24px;
+    font-size: 11px;
+}
+
+#safe_type span::before {
+    content: "";
+    background: url(../images/cart/safe_icon.png) no-repeat;
+    -webkit-background-size: 18px 18px;
+    background-size: 18px 18px;
+    height: 18px;
+    width: 18px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+/*-------订单列表--------*/
+#orderList {
+    margin-top: 10px;
+
+    /*border: 1px solid #ccc;*/
+}
+
+#orderList section {
+    margin-bottom: 20px;
+    background: #fff;
+}
+
+#orderList section .title {
+    height: 36px;
+    width: 100%;
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    line-height: 36px;
+}
+
+/*未选中单选框*/
+.checkBox {
+    background: url(../images/cart/shop-icon.png) no-repeat;
+    background-size: 50px 100px;
+    width: 20px;
+    height: 20px;
+    float: left;
+    margin-top: 8px;
+    margin-left: 8px;
+}
+
+.checkBox[checked] {
+    background-position: -25px 0;
+}
+
+#orderList section .title img {
+    float: left;
+    width: 20px;
+    height: 20px;
+    margin-top: 8px;
+    margin-left: 6px;
+}
+
+#orderList section .title span:nth-of-type(2) {
+    font-size: 16px;
+    float: left;
+    margin-left: 5px;
+}
+
+#orderList section .title span:nth-of-type(3) {
+    float: right;
+    color: #e9232c;
+    font-size: 12px;
+    margin-right: 8px;
+}
+
+#orderList section ul {
+    width: 100%;
+
+}
+
+#orderList section ul li {
+    width: 100%;
+    padding: 10px 0;
+    border-bottom: 1px solid #ccc;
+}
+
+/*左侧单选框*/
+#orderList section ul li .left {
+    float: left;
+    width: 28px;
+    height: 28px;
+}
+
+/*右侧内容*/
+#orderList section ul li .right {
+    overflow: hidden;
+    padding-left: 6px;
+}
+
+#orderList section ul li .right a {
+    display: block;
+    width: 80px;
+    height: 80px;
+    float: left;
+}
+
+#orderList section ul li .right a img {
+    width: 80px;
+    height: 80px;
+}
+
+#orderList section ul li .right .description {
+    overflow: hidden;
+    padding-left: 14px;
+    padding-right: 8px;
+}
+
+/*产品信息*/
+#orderList section ul li .right .description p {
+    font-size: 12px;
+    color: #666;
+    line-height: 20px;
+    overflow: hidden;
+    height: 40px
+}
+
+/*价格*/
+#orderList section ul li .right .description > span {
+    color: #e9232c;
+}
+
+/*数量*/
+#orderList section ul li .right .description .description_bottom {
+    width: 100%;
+}
+
+.description .description_bottom .number {
+    float: left;
+}
+
+.description .description_bottom .number span {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid #cccccc;
+    float: left;
+}
+
+/*数量 + -  */
+.description .description_bottom .number span:nth-of-type(1) {
+    border-radius: 3px 0 0 3px;
+}
+
+.description .description_bottom .number span:nth-of-type(2) {
+    border-radius: 0 3px 3px 0;
+}
+
+.description .description_bottom .number input {
+    width: 60px;
+    float: left;
+    height: 20px;
+    border-top: 1px solid #cccccc;
+    border-bottom: 1px solid #cccccc;
+    padding-left: 4px;
+}
+
+/*垃圾桶*/
+.description .description_bottom .delete {
+    float: right;
+}
+
+.description .description_bottom .delete span:nth-of-type(1) {
+    background: url(../images/cart/delete_up.png) no-repeat;
+    background-size: 18px 4px;
+    width: 18px;
+    height: 4px;
+    display: block;
+}
+
+.description .description_bottom .delete span:nth-of-type(2) {
+    background: url(../images/cart/delete_down.png) no-repeat;
+    background-size: 18px 18px;
+    width: 18px;
+    height: 18px;
+    display: block;
+    margin-top: -2px;
+}
+
+/*------弹出层-------*/
+.panel {
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    display: none;
+}
+
+.panel .panelBox {
+    width: 80%;
+    text-align: center;
+    background-color: #fff;
+    margin: 200px auto;
+    padding: 20px;
+    border-radius: 6px;
+}
+
+.panel .panelBox span {
+    display: block;
+    font-size: 18px;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 20px;
+}
+
+.panel .panelBox a {
+    display: block;
+    float: left;
+    width: 120px;
+    height: 40px;
+
+    text-align: center;
+    line-height: 40px;
+    font-size: 16px;
+
+    border: 1px solid #cccccc;
+    border-radius: 6px;
+    margin-top: 30px;
+
+    color: #333;
+}
+
+.panel .panelBox a:nth-of-type(2) {
+    float: right;
+    background: #e9232c;
+    color: #ffffff;
+}
+
+/*动画效果*/
+
+.jump {
+    animation: jump 0.8s ease;
+}
+
+@keyframes jump{
+    0%{
+        transform: translateY(-3000px);
+    }
+    65%{
+        transform: translateY(30px);
+    }
+    80%{
+        transform: translateY(-20px);
+    }
+    90%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+
